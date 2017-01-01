@@ -1,8 +1,8 @@
 module.exports = {
 
   entry: {
-    javascript: "./js/app.jsx",
-    html: "./index.html",
+    javascript: "./src/index.js",
+    html: "./src/index.html",
   },
   devtool: 'inline-source-map', // or 'source-map',
   output: {
@@ -10,7 +10,11 @@ module.exports = {
     path: __dirname + "/dist",
   },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.json']
+    extensions: ['', '.js', '.jsx', '.json'],
+    alias: {
+        'react': 'preact-compat',
+        'react-dom': 'preact-compat'
+    }
   },
   module: {
     loaders: [
