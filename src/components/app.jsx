@@ -1,11 +1,22 @@
 import { h, Component } from 'preact';
+import { connect } from 'react-redux';
 
-export default class App extends Component {
+
+const App = class extends Component {
 
 
-	render() {
-		return(
-			<div>Welcome</div>
-		)
-	}
-}
+  render() {
+    return (
+      <div>
+			Welcome to Preact
+			<p>{this.props.welcome}</p>
+      </div>
+    );
+  }
+};
+
+const mapStateToProps = state => ({
+  welcome: state.welcome_message,
+});
+
+export default connect(mapStateToProps)(App);

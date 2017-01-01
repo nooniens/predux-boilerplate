@@ -13,7 +13,10 @@
   "license": "ISC",
   "dependencies": {
     "preact": "^7.1.0",
-    "preact-compat": "^3.9.4"
+    "preact-compat": "^3.9.4",
+    "react-redux": "^5.0.1",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
